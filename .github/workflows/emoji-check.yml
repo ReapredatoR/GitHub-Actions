@@ -1,0 +1,20 @@
+name: Emoji Check
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  check-emojis:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Check Emoji Shortcodes
+        uses: actions/checkout@v2
+        with:
+          script: |
+            grep -r ":.*:" *.md
