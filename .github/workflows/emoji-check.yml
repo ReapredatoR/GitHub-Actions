@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       - name: Check Emoji Shortcodes
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
         with:
           script: |
             grep -r ":.*:" *.md
